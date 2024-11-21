@@ -1,0 +1,117 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff7eb3, #6a82fb); /* Gradient Background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+.dashboard-container {
+    width: 80%;
+    max-width: 1200px;
+    background: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+    font-size: 2.5rem;
+    color: #6a82fb;
+}
+
+.dashboard-header p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.dashboard-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: linear-gradient(135deg, #ff7eb3, #6a82fb); /* Gradient Full-Color Card */
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 1rem;
+    width: 300px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.card-header i {
+    font-size: 2rem;
+    margin-right: 10px;
+}
+
+.card-body p {
+    font-size: 1.2rem;
+    color: white;
+    margin: 1rem 0;
+}
+
+.card-body a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.card-body a:hover {
+    color: #ff5e62;
+}
+
+.btn-manage, .btn-logout {
+    background-color: #ff5e62;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    margin: 0.5rem;
+    box-shadow: 0 5px 15px rgba(255, 94, 98, 0.3);
+}
+
+.btn-manage:hover, .btn-logout:hover {
+    background-color: #ff8a6b;
+    box-shadow: 0 5px 25px rgba(255, 138, 107, 0.4);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 400px;
+    }
+}

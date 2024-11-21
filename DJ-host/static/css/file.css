@@ -1,0 +1,83 @@
+/* Same CSS as before */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff7eb3, #6a82fb);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+.upload-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.upload-card {
+    background: linear-gradient(135deg, #ff7eb3, #6a82fb);
+    border-radius: 10px;
+    padding: 2rem;
+    width: 400px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.upload-header {
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.upload-header i {
+    font-size: 2.5rem;
+    margin-right: 10px;
+}
+
+.upload-body {
+    margin-top: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.file-label {
+    display: inline-block;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    color: white;
+}
+
+.file-input {
+    display: none;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: #ff7eb3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: scale(1.05);
+}
+
+.submit-btn:active {
+    transform: scale(0.95);
+}

@@ -1,0 +1,77 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJ Host - Hosting Platform</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>DJ Host</h1>
+            </div>
+            <ul class="nav-links"> <!-- Navbar Links -->
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'dash' %}">Dashbord</a></li>
+                {% else %}
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="/singup/">Signup</a></li>
+                {% endif %}
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to DJ Host</h1>
+            <p>Fast, Secure, and Reliable Hosting Solutions.</p>
+            <button class="cta-btn">Get Started</button>
+        </div>
+        <div class="animated-3d-cube">
+            <p class="par">Dj-host is best static website deploy with few seacends
+            </p>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="cards">
+            <div class="card" onclick="window.location.href='/singup/'">
+                <h3>Student Plan</h3>
+                <h3>0<b>$</b></h3>
+                <p>Deploy single websites.</p>
+            </div>
+            <div class="card" onclick="window.location.href='/singup/'">
+                <h3>Basic Plan</h3>
+                <h3>5<b>$</b></h3>
+                <p>Deploy 5 websites.</p>
+            </div>
+            <div class="card" onclick="window.location.href='/singup/'">
+                <h3>Business plan</h3>
+                <h3>50<b>$</b></h3>
+                <p>Deploy unlimited websites.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 DJ Host. All Rights Reserved.</p>
+    </footer>
+
+    <script src="{% static 'js/scripts.js' %}"></script>
+</body>
+
+</html>

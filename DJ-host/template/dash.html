@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard - DJ Host</title>
+    <link rel="stylesheet" href="{% static 'css/dash.css' %}">
+    <!-- Add Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    
+
+    <div class="dashboard-container">
+        <div class="dashboard-header">
+            <h1>Welcome, <span id="user-name">{{ request.user.username }}</span></h1>
+            <p>Dashboard - Manage Your Deployed Website</p>
+        </div>
+
+        <div class="dashboard-content">
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-globe"></i>
+                    <h3>Website: <span id="site-name">YourSite</span></h3>
+                </div>
+                <div class="card-body">
+                    <p><strong>Website Link:</strong> <a href="{% url 'render_uploaded_file' request.user.username %}" id="site-link">{% url 'render_uploaded_file' request.user.username %}</a></p>
+                    <p><strong>Status:</strong> <span id="site-status">Deployed</span></p>
+                    <button id="manage-site-btn" class="btn-manage">Manage Website</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Settings</h3>
+                </div>
+                <div class="card-body">
+                    <button id="update-profile-btn" class="btn-manage">Update Profile</button>
+                    <button id="logout-btn" class="btn-logout"><a href="{% url 'logout' %}">Logout</a></button>
+                    <button id="logout-btn" class="btn-logout"><a href="{% url 'home' %}">Home</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{% static 'js/dash.css' %}"></script>
+</body>
+</html>
